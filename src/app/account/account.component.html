@@ -1,0 +1,31 @@
+<div style="text-align:center">
+  <h1>
+    {{ today | date:'y MMMM' }}
+  </h1>
+</div>
+<h2>PLACE HOLDER FOR BALANCE GRAPH (NOT NOW) </h2>
+<table class="gridtable">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Date</th>
+      <th scope="col">Name</th>
+      <th scope="col">Amount</th>
+      <th scope="col">Category</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let accountData of getSampleAccountDate(); let i = index">
+      <td>{{ i + 1 }}</td>
+      <td>{{ accountData.date | date:'MMM dd y' }}</td>
+      <td>{{ accountData.name }}</td>
+      <td>{{ accountData.amount }}</td>
+      <td>{{ accountData.category }}</td>
+    </tr>
+  </tbody>
+  <tfoot>
+    <tr>
+      <td colspan="5">Copy Right 2017&copy;</td>
+    </tr>
+  </tfoot>
+</table>
