@@ -5,6 +5,7 @@ table.gridtable {
 	border-width: 1px;
 	border-color: #666666;
 	border-collapse: collapse;
+	width: 60vw;
 }
 table.gridtable th {
 	border-width: 1px;
@@ -19,4 +20,11 @@ table.gridtable td {
 	border-style: solid;
 	border-color: #666666;
 	background-color: #ffffff;
+}
+.summary {
+	border: 1px solid black;
+	width: 30vw;
+}
+.summary.float {
+	position: relative;
 }
