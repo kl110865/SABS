@@ -1,14 +1,14 @@
 import { Component } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
-import { Account } from './shared/shared.model';
+import { Account } from '../shared/shared.model';
 
 @Component({
-  selector: 'app-account',
-  templateUrl: './account.component.html',
-  styleUrls: ['./account.component.css']
+  selector: 'app-account-details',
+  templateUrl: './account-details.component.html',
+  styleUrls: ['./account-details.component.css']
 })
-export class AccountComponent {
+export class AccountDetailsComponent {
   title = 'SABS';
   today: number = Date.now();
   sampleAccountData: Array<Account>;
