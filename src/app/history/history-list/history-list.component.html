@@ -1,0 +1,33 @@
+<div style="text-align:center">
+  <h1>
+    List
+  </h1>
+</div>
+<h2>PLACE HOLDER FOR BALANCE GRAPH (NOT NOW) </h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-8">
+      <table class="table">
+        <thead>
+          <tr>
+            <th>#</th>
+            <th>Month</th>
+            <th>Total</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let month of getSampleMonthlyHistory(); let i = index">
+            <td>{{ i }}</td>
+            <td>{{ month.month }}</td>
+            <td>{{ 'later' }}</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <td colspan="5">Copy Right 2017&copy;</td>
+          </tr>
+        </tfoot>
+      </table>
+    </div>
+  </div>
+</div>
