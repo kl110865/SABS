@@ -3,38 +3,20 @@ import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
-import { AccountComponent} from './account/account.component';
-import { AccountDetailsComponent } from './account/account-details/account-details.component';
-import { AccountSummaryComponent } from './account/account-summary/account-summary.component';
+import { PageNotFoundComponent } from './not-found.component';
+
+import { AppRoutingModule } from './app-rounting.module';
+import { AccountModule } from './account/account.module';
 
 @NgModule({
   declarations: [
     AppComponent,
-    AccountComponent,
-    AccountDetailsComponent,
-    AccountSummaryComponent
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
-    RouterModule.forRoot([
-      {
-        path: '',
-        redirectTo: 'account',
-        pathMatch: 'full'
-      },
-      {
-        path: 'account',
-        component: AccountComponent
-      },
-      {
-        path: 'account-details',
-        component: AccountDetailsComponent
-      },
-      {
-        path: 'account-summary',
-        component: AccountSummaryComponent
-      }
-    ])
+    AccountModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [ AppComponent ]
