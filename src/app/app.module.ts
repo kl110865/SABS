@@ -7,6 +7,7 @@ import { PageNotFoundComponent } from './not-found.component';
 
 import { AppRoutingModule } from './app-rounting.module';
 import { AccountModule } from './account/account.module';
+import { HistoryModule } from './history/history.module';
 
 @NgModule({
   declarations: [
@@ -16,6 +17,7 @@ import { AccountModule } from './account/account.module';
   imports: [
     BrowserModule,
     AccountModule,
+    HistoryModule,
     AppRoutingModule
   ],
   providers: [],

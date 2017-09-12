@@ -5,9 +5,14 @@ import { AccountDetailsComponent } from './account-details/account-details.compo
 import { AccountSummaryComponent } from './account-summary/account-summary.component';
 
 const accountRoutes: Routes = [
-  {
-    path: 'account',
-    children: [
+    {
+        path: 'account',
+        children: [
+            {
+                path: '',
+                redirectTo: 'account-summary',
+                pathMatch: 'full'
+            },
             {
                 path: 'account-details',
                 component: AccountDetailsComponent
@@ -27,5 +32,5 @@ const accountRoutes: Routes = [
     exports: [
         RouterModule
     ]
-  })
+})
 export class AccountRoutingModule { }
