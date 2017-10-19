@@ -30,4 +30,12 @@ export class AccountSummaryComponent {
   getSampleAccountDate() {
     return this.sampleAccountData;
   }
+
+  clickAddNewRecord(event: Event, newDate: number, newName: string, newAmount: number, newCategory: string) {
+    event.stopPropagation();
+    event.preventDefault();
+    this.sampleAccountData.push({
+      id: this.sampleAccountData.length, name: newName, date: newDate, amount: newAmount, category: newCategory
+    });
+  }
 }
