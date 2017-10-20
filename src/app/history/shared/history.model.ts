@@ -10,8 +10,19 @@ export class Transaction {
     }
 }
 
-export class Month {
-    id: number;
-    month: string;
+export class TimeSpan {
+    start: Date;
+    end: Date;
+}
+
+export class HistorySpan {
+    name: string;
+    timespan: TimeSpan;
     transactions: Array<Transaction>;
+}
+
+export class HistorySpanSummary {
+    name: string;
+    timespan: TimeSpan;
+    sum: number;
 }

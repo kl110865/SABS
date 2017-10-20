@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { DatePipe } from '@angular/common';
 
-import { Month, Transaction } from '../shared/history.model';
+import { HistorySpanSummary, Transaction } from '../shared/history.model';
 
 @Component({
     selector: 'app-history-list',
@@ -11,19 +11,19 @@ import { Month, Transaction } from '../shared/history.model';
 export class HistoryListComponent {
     title = 'History List';
     today: number = Date.now();
-    sampleHistoryData: Array<Month>;
+    sampleHistoryData: Array<HistorySpanSummary>;
 
     constructor() {
         this.sampleHistoryData = [
-            { id: 1, month: 'Jan', transactions: [] },
-            { id: 2, month: 'Feb', transactions: [] },
-            { id: 3, month: 'Mar', transactions: [] },
-            { id: 4, month: 'Apr', transactions: [] },
-            { id: 5, month: 'May', transactions: [] },
-            { id: 6, month: 'Jun', transactions: [] },
-            { id: 7, month: 'Jul', transactions: [] },
-            { id: 8, month: 'Aug', transactions: [] },
-            { id: 9, month: 'Sep', transactions: [] },
+            { name: 'Jan', timespan: {start: null, end: null}, sum: 100 },
+            { name: 'Feb', timespan: {start: null, end: null}, sum: 200 },
+            { name: 'Mar', timespan: {start: null, end: null}, sum: 300 },
+            { name: 'Apr', timespan: {start: null, end: null}, sum: 400 },
+            { name: 'May', timespan: {start: null, end: null}, sum: 500 },
+            { name: 'Jun', timespan: {start: null, end: null}, sum: 100 },
+            { name: 'Jul', timespan: {start: null, end: null}, sum: 200 },
+            { name: 'Aug', timespan: {start: null, end: null}, sum: 300 },
+            { name: 'Sep', timespan: {start: null, end: null}, sum: 400 }
         ];
     }
 
