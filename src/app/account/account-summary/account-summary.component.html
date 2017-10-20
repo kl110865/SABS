@@ -25,6 +25,31 @@
             <td>{{ accountData.amount }}</td>
             <td>{{ accountData.category }}</td>
           </tr>
+          <tr>
+              <td>
+                <span>whatever</span>
+              </td>
+              <td>
+                <input #newDate required type="text">
+              </td>
+              <td>
+                <input #newName required type="text">
+              </td>
+              <td>
+                <input #newAmount required type="text">
+              </td>
+              <td>
+                <input #newCategory required type="text">
+              </td>
+          </tr>
+          <tr>
+            <td colspan="4">
+              <a href="#" 
+                (click)="clickAddNewRecord($event, newDate.value, newName.value, newAmount.value, newCategory.value)">
+                Add item
+              </a>
+            </td>
+          </tr>
         </tbody>
       </table>
     </div>
